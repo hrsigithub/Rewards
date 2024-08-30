@@ -31,8 +31,8 @@ pyautogui.press('enter')
 # Chromeが開くまで待機
 time.sleep(3)
 
-# 10回の検索を実行
-for _ in range(5):
+# 90回の検索を実行
+for _ in range(90):
 
     # アドレスバーにフォーカスする
     pyautogui.hotkey('command', 'l')
