@@ -2,6 +2,7 @@ import pyautogui
 import time
 import random
 import string
+import os  # osモジュールをインポート
 
 pyautogui.FAILSAFE = True
 
@@ -32,7 +33,9 @@ pyautogui.press('enter')
 time.sleep(3)
 
 # 90回の検索を実行
-for _ in range(90):
+# for _ in range(90):
+for _ in range(30):
+# for _ in range(60):
 
     # アドレスバーにフォーカスする
     pyautogui.hotkey('command', 'l')
@@ -54,3 +57,7 @@ for _ in range(90):
 
     # 次の検索まで少し待機
     time.sleep(3)
+
+
+# 検索が終了したらビープ音を鳴らす
+os.system('echo -n "\a"')  # MacおよびLinuxの場合
