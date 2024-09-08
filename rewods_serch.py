@@ -33,7 +33,7 @@ pyautogui.press('enter')
 time.sleep(3)
 
 # 90回の検索を実行
-for _ in range(90):
+for _ in range(60):
 
     # アドレスバーにフォーカスする
     pyautogui.hotkey('command', 'l')
@@ -57,6 +57,6 @@ for _ in range(90):
     time.sleep(3)
 
 
-# 検索が終了したらビープ音を鳴らす
+# 検索が終了したら音を鳴らす
 # os.system('echo -n "\a"')  # MacおよびLinuxの場合
 os.system('afplay /Users/hrsi/dev/PythonProjects/Rewards/lvup1.mp3')  # 音声ファイルのパスを指定
