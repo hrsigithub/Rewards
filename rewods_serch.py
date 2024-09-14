@@ -33,7 +33,7 @@ pyautogui.press('enter')
 time.sleep(3)
 
 # 90回の検索を実行
-for _ in range(60):
+for _ in range(30):
 
     # アドレスバーにフォーカスする
     pyautogui.hotkey('command', 'l')
