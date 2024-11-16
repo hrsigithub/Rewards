@@ -3,6 +3,10 @@ import time
 import random
 import string
 import os  # osモジュールをインポート
+ 
+
+                
+# 全角モードなら動作しない
 
 pyautogui.FAILSAFE = True
 
@@ -17,6 +21,7 @@ time.sleep(2)
 pyautogui.keyDown('command')
 pyautogui.press('space')
 pyautogui.keyUp('command')
+
 
 # 少し待機
 time.sleep(1)
@@ -33,7 +38,7 @@ pyautogui.press('enter')
 time.sleep(3)
 
 # 90回の検索を実行
-for _ in range(30):
+for _ in range(5):
 
     # アドレスバーにフォーカスする
     pyautogui.hotkey('command', 'l')
@@ -59,4 +64,4 @@ for _ in range(30):
 
 # 検索が終了したら音を鳴らす
 # os.system('echo -n "\a"')  # MacおよびLinuxの場合
-os.system('afplay /Users/hrsi/dev/PythonProjects/Rewards/lvup1.mp3')  # 音声ファイルのパスを指定
+# os.system('afplay /Users/hrsi/dev/PythonProjects/Rewards/lvup1.mp3')  # 音声ファイルのパスを指定
