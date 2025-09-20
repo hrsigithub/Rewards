@@ -8,11 +8,11 @@ from datetime import datetime
 # -------------------
 # 設定
 # -------------------
-WAIT_BEFORE_START = 2      # 最初の待機秒数
-WAIT_AFTER_SPOTLIGHT = 1   # Spotlight起動後の待機
-WAIT_AFTER_CHROME = 3      # Chrome起動待機
-WAIT_AFTER_SEARCH = 3      # 検索後の待機
-SEARCH_COUNT = 5           # 検索回数
+WAIT_BEFORE_START = 3      # 最初の待機秒数
+WAIT_AFTER_SPOTLIGHT = 5   # Spotlight起動後の待機
+WAIT_AFTER_CHROME = 5      # Chrome起動待機
+WAIT_AFTER_SEARCH = 10      # 検索後の待機
+SEARCH_COUNT = 30           # 検索回数
 USE_JAPANESE = False       # True にすると日本語検索
 ALERT_SOUND = "lvup1.mp3"
 
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     print(f"終了時刻: {end_time}")
 
     # 終了音
-    # play_sound(ALERT_SOUND)
+    play_sound(ALERT_SOUND)
