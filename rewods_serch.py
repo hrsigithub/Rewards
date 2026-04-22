@@ -3,7 +3,9 @@ import time
 import random
 import string
 import subprocess
+
 from datetime import datetime
+from tqdm import tqdm
 
 # -------------------
 # 設定
@@ -12,7 +14,8 @@ WAIT_BEFORE_START = 3      # 最初の待機秒数
 WAIT_AFTER_SPOTLIGHT = 5   # Spotlight起動後の待機
 WAIT_AFTER_CHROME = 5      # Chrome起動待機
 WAIT_AFTER_SEARCH = 10      # 検索後の待機
-SEARCH_COUNT = 30           # 検索回数
+# SEARCH_COUNT = 30           # 検索回数
+SEARCH_COUNT = 120           # 検索回数
 USE_JAPANESE = False       # True にすると日本語検索
 ALERT_SOUND = "lvup1.mp3"
 
@@ -74,7 +77,7 @@ if __name__ == "__main__":
     # time.sleep(WAIT_AFTER_CHROME)
 
     # 検索ループ
-    for _ in range(SEARCH_COUNT):
+    for _ in tqdm(range(SEARCH_COUNT), desc="Searching"):
         text = random_search_text(10, USE_JAPANESE)
         search_in_chrome(text)
         time.sleep(WAIT_AFTER_SEARCH)
